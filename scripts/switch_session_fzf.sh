@@ -20,12 +20,11 @@ function main {
 
   if [ $retval == 0 ]; then
     if [ "$session" == "" ]; then
-      # This means that we selected without typing.
       session="$query"
     fi
-    tmux switch-client -t $session
+    tmux switch-client -t "$session"
   elif [ $retval == 1 ]; then
-    tmux command -p "Make new session '$query'?"\
+    tmux command -p "Enter '$query'"\
       "run '$CURRENT_DIR/make_new_session.sh \"$query\" \"%1\"'"
   fi
 }
