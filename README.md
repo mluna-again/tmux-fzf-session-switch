@@ -30,5 +30,5 @@ through your sessions with fzf.
 
 ## Requirements
 
-[fzf](https://github.com/junegunn/fzf
-rg (recommended but not required)
+- [fzf](https://github.com/junegunn/fzf
+- rg (recommended but not required)
