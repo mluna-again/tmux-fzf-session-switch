@@ -12,7 +12,7 @@ through your sessions with fzf.
 - I use prefix in tmux is `ctrl + a`, So I mod default key to `ctrl + f` cuz when you press `ctrl + a + f` in one time, your right hand don't need have any motion, for me this faster than default `prefix + l`
 
 ## Functionality
-- `Prefix + Ctrl + f`: Open up fzf in a new tab.
+- `Prefix + Ctrl + f`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hole ctrl -> press a -> press f -> done)
 - If you type a name that doesn't exist, you will be prompted to create it.
 
 ## Requirements
