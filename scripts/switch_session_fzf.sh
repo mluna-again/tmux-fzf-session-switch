@@ -24,7 +24,7 @@ function main {
     fi
     tmux switch-client -t "$session"
   elif [ $retval == 1 ]; then
-    tmux command -p "Enter '$query'"\
+    tmux command -p "Press enter to create and go to [$query] session"\
       "run '$CURRENT_DIR/make_new_session.sh \"$query\" \"%1\"'"
   fi
 }
