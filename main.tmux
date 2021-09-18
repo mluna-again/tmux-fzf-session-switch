@@ -2,7 +2,7 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-default_key_bindings_goto="l"
+default_key_bindings_goto="C-f"
 tmux_option_goto="@fzf-goto-session"
 
 get_tmux_option() {
