@@ -29,5 +29,5 @@ through your sessions with fzf.
 
 ## Requirements
 
-- [fzf](https://github.com/junegunn/fzf
+- [fzf](<https://github.com/junegunn/fzf>)
 - rg (recommended but not required)
