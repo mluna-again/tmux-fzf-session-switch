@@ -1,5 +1,16 @@
 # TMUX FZF Session Switch (folk)
 
+**↓↓Table of Contents↓↓**
+
+- [TMUX FZF Session Switch (folk)](#tmux-fzf-session-switch-folk)
+  - [Customization from me](#customization-from-me)
+  - [Purpose](#purpose)
+  - [Install](#install)
+  - [Functionality](#functionality)
+  - [Requirements](#requirements)
+
+---
+
 ## Customization from me
 
 - Work with session name have `space` character. e.g. "Thuan Pham is handsome"
