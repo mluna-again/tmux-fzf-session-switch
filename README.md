@@ -1,4 +1,6 @@
-# TMUX FZF Session Switch (folk)
+# TMUX FZF Session Switch (fork)
+
+![Demo](./img/20211130134835.png)
 
 **↓↓Table of Contents↓↓**
 
