@@ -9,8 +9,7 @@ function main {
   local sess_arr
   local retval
   sessions=$(tmux list-sessions -F "#{session_name}" | \
-    fzf --select-1 --exit-0 --print-query)
-
+    fzf --select-1 --exit-0 --print-query --reverse)
   retval=$?
 
   IFS=$'\n' read -rd '' -a sess_arr <<<"$sessions"
