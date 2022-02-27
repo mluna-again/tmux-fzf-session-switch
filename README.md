@@ -18,7 +18,7 @@
 
 - Work with session name have `space` character. e.g. "Thuan Pham is handsome"
 - Don't confirm `y` to create new session, I just lazy press 2 time `Enter` to create new session.
-- Pop-up windown instead of new window (required tmux >= 3.2)
+- Pop-up windown instead of new window (required tmux >= v3.2)
 
 ## Two way, You want customize key binding
 
