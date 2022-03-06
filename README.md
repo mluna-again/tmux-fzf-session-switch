@@ -19,6 +19,16 @@
 - Work with session name have `space` character. e.g. "Thuan Pham is handsome"
 - Don't confirm `y` to create new session, I just lazy press 2 time `Enter` to create new session.
 - Pop-up windown instead of new window (required tmux >= v3.2)
+- Use in command line
+
+```bash
+function tmuxSessionSwitch() {
+  local session
+  session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
+  tmux switch-client -t "$session"
+}
+alias af='tmuxSessionSwitch'
+```
 
 ## Two way, You want customize key binding
 
