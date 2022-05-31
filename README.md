@@ -46,6 +46,10 @@ function killAllUnnameTmuxSession() {
 alias clear='killAllUnnameTmuxSession ; clear -x'
 ```
 
+- In my use case i don't use this keybinding for switch session, i use `hold space + f` mapping for `hold Ctrl + a + f`, how can i use `hold space + f` mapping? -> i use [input remapper](https://github.com/sezanzeb/input-remapper), also you can see [my dotfiles](https://github.com/thuanpham2311/dotfiles)
+
+![input remaper](./img/input-remapper-space-f.png)
+
 ## Two way, You want customize key binding
 
 1. You can folk this project and edit this line `default_key_bindings_goto="C-f"` in `main.tmux`, you change `set -g @plugin '{{your github username}}/tmux-fzf-session-switch' in your tmux config
