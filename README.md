@@ -1,16 +1,6 @@
+↖️ (Feeling lost? Use the GitHub TOC!)
+
 # TMUX FZF Session Switch (fork)
-
-**↓↓Table of Contents↓↓**
-
-- [TMUX FZF Session Switch (fork)](#tmux-fzf-session-switch-fork)
-  - [Customization from me](#customization-from-me)
-  - [Two way, You want customize key binding](#two-way-you-want-customize-key-binding)
-  - [Purpose](#purpose)
-  - [Install](#install)
-  - [Functionality](#functionality)
-  - [Requirements](#requirements)
-
----
 
 ![image_2021-11-30-17-22-26](img/image_2021-11-30-17-22-26.png)
 
@@ -19,7 +9,8 @@
 - Work with session name have `space` character. e.g. "Thuan Pham is handsome"
 - Don't confirm `y` to create new session, I just lazy press 2 time `Enter` to create new session.
 - Pop-up windown instead of new window (required tmux >= v3.2)
-- Use in command line
+
+> Use in command line
 
 ```bash
 function tmuxSessionSwitch() {
@@ -28,6 +19,31 @@ function tmuxSessionSwitch() {
   tmux switch-client -t "$session"
 }
 alias af='tmuxSessionSwitch'
+```
+
+> fzfDown is my customize fzf ui, you can simply use fzf instead of fzfDown
+
+```bash
+fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
+```
+
+```bash
+function killAllUnnameTmuxSession() {
+  echo "kill all unname tmux session"
+  cd /tmp/
+  tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
+  sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
+  chmod +x killAllUnnameTmuxSessionOutput.sh
+  ./killAllUnnameTmuxSessionOutput.sh
+  cd -
+  tmux ls
+}
+```
+
+> use with `clear` command is the best
+
+```
+alias clear='killAllUnnameTmuxSession ; clear -x'
 ```
 
 ## Two way, You want customize key binding
