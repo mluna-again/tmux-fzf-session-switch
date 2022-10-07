@@ -4,7 +4,34 @@
 
 ![image_2021-11-30-17-22-26](img/image_2021-11-30-17-22-26.png)
 
-## Customization from me
+## Install
+
+- Install this <https://github.com/tmux-plugins/tpm>
+- Put `set -g @plugin 'thuanpham2311/tmux-fzf-session-switch'` into your tmux config
+- Use tpm install plugin. Default you can press `prefix + I` (`I` is `shirt + i` = I)
+- Finally. `Hold ctrl -> press a -> press f`
+  > my prefix is `ctrl + a`
+-
+
+## Customize key binding
+
+```bash
+# tmux.conf
+
+set -g @fzf-goto-session 'key binding'
+```
+
+## Functionality
+
+- `Prefix + `: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl -> press a -> press f -> done)
+- If you type a name that doesn't exist, you will be prompted to create it.
+
+## Requirements
+
+- [fzf](https://github.com/junegunn/fzf)
+- rg (recommended but not required)
+
+## Customization from me + tips
 
 - Work with session name have `space` character. e.g. "Thuan Pham is handsome"
 - Don't confirm `y` to create new session, I just lazy press 2 time `Enter` to create new session.
@@ -49,29 +76,3 @@ alias clear='killAllUnnameTmuxSession ; clear -x'
 - In my use case i don't use this keybinding for switch session, i use `hold space + f` mapping for `hold Ctrl + a + f`, how can i use `hold space + f` mapping? -> i use [input remapper](https://github.com/sezanzeb/input-remapper), also you can see [my dotfiles](https://github.com/thuanpham2311/dotfiles)
 
 ![input remaper](./img/input-remapper-space-f.png)
-
-## Customize key binding
-
-```bash
-# tmux.conf
-
-set -g @fzf-goto-session 'key binding'
-```
-
-## Install
-
-- Install this <https://github.com/tmux-plugins/tpm>
-- Put `set -g @plugin 'thuanpham2311/tmux-fzf-session-switch'` into your tmux config
-- Use tpm install plugin. Default you can press `prefix + I` (`I` is `shirt + i` = I)
-- Finally. `Hold ctrl -> press a -> press f`
-  > my prefix is `ctrl + a`
-
-## Functionality
-
-- `Prefix + `: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl -> press a -> press f -> done)
-- If you type a name that doesn't exist, you will be prompted to create it.
-
-## Requirements
-
-- [fzf](https://github.com/junegunn/fzf)
-- rg (recommended but not required)
