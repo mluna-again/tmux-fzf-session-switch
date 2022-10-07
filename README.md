@@ -61,7 +61,7 @@ set -g @fzf-goto-session 'key binding'
 ## Install
 
 - Install this <https://github.com/tmux-plugins/tpm>
-- Put `set -g @plugin 'thuanpham2311/tmux-fzf-session-switch' into your tmux config
+- Put `set -g @plugin 'thuanpham2311/tmux-fzf-session-switch'` into your tmux config
 - Use tpm install plugin. Default you can press `prefix + I` (`I` is `shirt + i` = I)
 - Finally. `Hold ctrl -> press a -> press f`
   > my prefix is `ctrl + a`
