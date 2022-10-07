@@ -50,16 +50,13 @@ alias clear='killAllUnnameTmuxSession ; clear -x'
 
 ![input remaper](./img/input-remapper-space-f.png)
 
-## Two way, You want customize key binding
+## Customize key binding
 
-1. You can folk this project and edit this line `default_key_bindings_goto="C-f"` in `main.tmux`, you change `set -g @plugin '{{your github username}}/tmux-fzf-session-switch' in your tmux config
-2. You can create pull request, "feature custom keybinding" is good too 😁 cuz I'm noob and lazy to make this feature.
+```bash
+# tmux.conf
 
-## Purpose
-
-If you're like me and you tend to have a lot of sessions to organize your
-thoughts then this is the plugin for you. With this plugin you can search
-through your sessions with fzf.
+set -g @fzf-goto-session 'key binding'
+```
 
 ## Install
 
