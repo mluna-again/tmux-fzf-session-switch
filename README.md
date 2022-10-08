@@ -6,12 +6,10 @@
 
 ## Install
 
-- Install this <https://github.com/tmux-plugins/tpm>
+- Install the [tpm](https://github.com/tmux-plugins/tpm) Tmux Plugin Manager.
 - Put `set -g @plugin 'thuanpham2311/tmux-fzf-session-switch'` into your tmux config
-- Use tpm install plugin. Default you can press `prefix + I` (`I` is `shirt + i` = I)
-- Finally. `Hold ctrl -> press a -> press f`
-  > my prefix is `ctrl + a`
--
+- Use tpm to install this plugin. Default you can press `prefix + I` (`I` is `shift + i` = I)
+- Finally activate the session switcher: `prefix` followed by `C-f` (control + f)
 
 ## Customize key binding
 
@@ -19,6 +17,12 @@
 # tmux.conf
 
 set -g @fzf-goto-session 'key binding'
+```
+
+to override the default session switcher in tmux avilable at `prefix + s`:
+
+```bash
+set -g @fzf-goto-session 's'
 ```
 
 ## Functionality
