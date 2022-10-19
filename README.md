@@ -7,9 +7,11 @@
 ## Install
 
 - Install the [tpm](https://github.com/tmux-plugins/tpm) Tmux Plugin Manager.
-- Put `set -g @plugin 'thuanpham2311/tmux-fzf-session-switch'` into your tmux config
-- Use tpm to install this plugin. Default you can press `prefix + I` (`I` is `shift + i` = I)
-- Finally activate the session switcher: `prefix` followed by `C-f` (control + f)
+- Put `set -g @plugin 'thuanOwa/tmux-fzf-session-switch'` into your tmux config
+- Use tpm to install this plugin. Default you can press `prefix + I` (`I` is
+  `shift + i` = I)
+- Finally activate the session switcher: `prefix` followed by `C-f` (control +
+  f)
 
 ## Customize key binding
 
@@ -27,7 +29,8 @@ set -g @fzf-goto-session 's'
 
 ## Functionality
 
-- `Prefix + `: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl -> press a -> press f -> done)
+- `Prefix +`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl ->
+  press a -> press f -> done)
 - If you type a name that doesn't exist, you will be prompted to create it.
 
 ## Requirements
@@ -38,7 +41,8 @@ set -g @fzf-goto-session 's'
 ## Customization from me + tips
 
 - Work with session name have `space` character. e.g. "Thuan Pham is handsome"
-- Don't confirm `y` to create new session, I just lazy press 2 time `Enter` to create new session.
+- Don't confirm `y` to create new session, I just lazy press 2 time `Enter` to
+  create new session.
 - Pop-up windown instead of new window (required tmux >= v3.2)
 
 > Use in command line
@@ -77,6 +81,10 @@ function killAllUnnameTmuxSession() {
 alias clear='killAllUnnameTmuxSession ; clear -x'
 ```
 
-- In my use case i don't use this keybinding for switch session, i use `hold space + f` mapping for `hold Ctrl + a + f`, how can i use `hold space + f` mapping? -> i use [input remapper](https://github.com/sezanzeb/input-remapper), also you can see [my dotfiles](https://github.com/thuanpham2311/dotfiles)
+- In my use case i don't use this keybinding for switch session, i use
+  `hold space + f` mapping for `hold Ctrl + a + f`, how can i use
+  `hold space + f` mapping? -> i use
+  [input remapper](https://github.com/sezanzeb/input-remapper), also you can see
+  [my dotfiles](https://github.com/thuanOwa/dotfiles)
 
 ![input remaper](./img/input-remapper-space-f.png)
