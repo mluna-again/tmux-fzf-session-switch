@@ -102,7 +102,7 @@ alias clear='killAllUnnameTmuxSession ; clear -x'
 
 - In my use case, I don't use this keybinding for switch sessions, I use `hold space + ;` mapping for `hold Ctrl + a + f`
 - How can I use `hold space + ;` mapping?
-  -> I use [input](https://github.com/sezanzeb/input-remapper) remapper](https://github.com/sezanzeb/input-remapper), also you can see [my dotfiles](https://github.com/thuanOwa/dotfiles)
+  -> I use [input remapper](https://github.com/sezanzeb/input-remapper), also you can see [my dotfiles](https://github.com/thuanOwa/dotfiles)
 
 > config in GUI
 
