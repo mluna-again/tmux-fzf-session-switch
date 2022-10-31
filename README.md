@@ -1,6 +1,6 @@
 ↖️ (Feeling lost? Use the GitHub TOC!)
 
-# TMUX FZF Session Switch (fork)
+# TMUX FZF Session Switch
 
 ![image_2021-11-30-17-22-26](img/image_2021-11-30-17-22-26.png)
 
@@ -13,18 +13,34 @@
 - Finally activate the session switcher: `prefix` followed by `C-f` (control +
   f)
 
-## Customize key binding
+## Customize
+
+> 🫰Thanks to [@erikw](https://github.com/erikw)
+
+### Key binding
 
 ```bash
-# tmux.conf
-
 set -g @fzf-goto-session 'key binding'
 ```
 
-to override the default session switcher in tmux avilable at `prefix + s`:
+> Eg. to override the default session switcher in tmux available at `prefix` + s`:
 
 ```bash
 set -g @fzf-goto-session 's'
+```
+
+### Window dimensions
+
+```bash
+set -g @fzf-goto-win-width WIDTH
+set -g @fzf-goto-win-height HEIGHT
+```
+
+> Eg.
+
+```bash
+set -g @fzf-goto-win-width 70
+set -g @fzf-goto-win-height 20
 ```
 
 ## Functionality
@@ -36,16 +52,17 @@ set -g @fzf-goto-session 's'
 ## Requirements
 
 - [fzf](https://github.com/junegunn/fzf)
-- rg (recommended but not required)
+- Rg (recommended but not required)
 
-## Customization from me + tips
+## Customization from me
 
-- Work with session name have `space` character. e.g. "Thuan Pham is handsome"
-- Don't confirm `y` to create new session, I just lazy press 2 time `Enter` to
-  create new session.
-- Pop-up windown instead of new window (required tmux >= v3.2)
+- Work with session name has `space` character. e.g. "Thuan Pham is handsome"
+- Don't confirm `y` to create a new session, I just lazy press 2 times `Enter` to create a new session.
+- Pop-up window instead of the new window (required tmux >= v3.2)
 
-> Use in command line
+## Tips
+
+### Use in command line
 
 ```bash
 function tmuxSessionSwitch() {
@@ -81,10 +98,19 @@ function killAllUnnameTmuxSession() {
 alias clear='killAllUnnameTmuxSession ; clear -x'
 ```
 
-- In my use case i don't use this keybinding for switch session, i use
-  `hold space + f` mapping for `hold Ctrl + a + f`, how can i use
-  `hold space + f` mapping? -> i use
-  [input remapper](https://github.com/sezanzeb/input-remapper), also you can see
-  [my dotfiles](https://github.com/thuanOwa/dotfiles)
+### Easy to press
 
-![input remaper](./img/input-remapper-space-f.png)
+- In my use case, I don't use this keybinding for switch sessions, I use `hold space + ;` mapping for `hold Ctrl + a + f`
+- How can I use `hold space + ;` mapping?
+  -> I use [input](https://github.com/sezanzeb/input-remapper) remapper](https://github.com/sezanzeb/input-remapper), also you can see [my dotfiles](https://github.com/thuanOwa/dotfiles)
+
+> config in GUI
+
+```python
+space: if_single(key(KEY_SPACE), ,timeout=10000)
+space + semicolon: KEY_RIGHTCTRL+a+f
+```
+
+![input remapper][img_input_remapper]
+
+[img_input_remapper]: ./img/input_remapper.png
