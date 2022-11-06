@@ -45,7 +45,7 @@ set -g @fzf-goto-win-height 20
 
 ## Functionality
 
-- `Prefix +`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl ->
+- `Prefix + Ctrl + f`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl ->
   press a -> press f -> done)
 - If you type a name that doesn't exist, you will be prompted to create it.
 
