@@ -62,6 +62,11 @@ set -g @fzf-goto-win-height 20
 
 ## Tips
 
+### create new session
+
+- Just type the new session name and press enter
+- If this name conflicts with another session name -> add a double/single quotes `'example'`
+
 ### Use in command line
 
 ```bash
