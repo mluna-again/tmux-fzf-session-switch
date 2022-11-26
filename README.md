@@ -51,7 +51,7 @@ set -g @fzf-goto-win-height 20
 
 ## Requirements
 
-- Tmux >= 3.3a
+- Tmux >= 3.3a (https://github.com/thuanowa/tmux-fzf-session-switch/pull/5/files)
 - [fzf](https://github.com/junegunn/fzf)
 - Rg (recommended but not required)
 
