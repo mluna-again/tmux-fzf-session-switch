@@ -51,6 +51,7 @@ set -g @fzf-goto-win-height 20
 
 ## Requirements
 
+- Tmux >= 3.3a
 - [fzf](https://github.com/junegunn/fzf)
 - Rg (recommended but not required)
 
