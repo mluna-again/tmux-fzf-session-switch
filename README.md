@@ -106,3 +106,8 @@ space + semicolon: KEY_RIGHTCTRL+a+f
 ![input remapper][img_input_remapper]
 
 [img_input_remapper]: ./img/input_remapper.png
+
+## QnA
+
+Why I don't create push request to main repo?
+-> "Don't confirm `y` to create a new session". This one different flow from the original repo. So that's why I don't push request into original repo.
