@@ -2,16 +2,26 @@
 
 # TMUX FZF Session Switch
 
-![image_2021-11-30-17-22-26](img/image_2021-11-30-17-22-26.png)
+![preview img](/img/preview.png)
 
-## Install
+## Getting started
 
 - Install the [tpm](https://github.com/tmux-plugins/tpm) Tmux Plugin Manager.
 - Put `set -g @plugin 'thuanOwa/tmux-fzf-session-switch'` into your tmux config
 - Use tpm to install this plugin. Default you can press `prefix + I` (`I` is
   `shift + i` = I)
-- Finally activate the session switcher: `prefix` followed by `C-f` (control +
-  f)
+
+- `Prefix + Ctrl + f`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl ->
+  press a -> press f -> done)
+- If you type a name that doesn't exist, you will be prompted to create it. 
+
+> If this name conflicts with another session name -> add a double/single quotes `'example'`
+
+## Requirements
+
+- [Tmux >= 3.3a](https://github.com/thuanowa/tmux-fzf-session-switch/pull/5/files) `pop-up menu`
+- [fzf](https://github.com/junegunn/fzf)
+- Rg (recommended but not required)
 
 ## Customize
 
@@ -43,30 +53,7 @@ set -g @fzf-goto-win-width 70
 set -g @fzf-goto-win-height 20
 ```
 
-## Functionality
-
-- `Prefix + Ctrl + f`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl ->
-  press a -> press f -> done)
-- If you type a name that doesn't exist, you will be prompted to create it.
-
-## Requirements
-
-- Tmux >= 3.3a (https://github.com/thuanowa/tmux-fzf-session-switch/pull/5/files)
-- [fzf](https://github.com/junegunn/fzf)
-- Rg (recommended but not required)
-
-## Customization from me
-
-- Work with session name has `space` character. e.g. "Thuan Pham is handsome"
-- Don't confirm `y` to create a new session, I just lazy press 2 times `Enter` to create a new session.
-- Pop-up window instead of the new window (required tmux >= v3.2)
-
 ## Tips
-
-### create new session
-
-- Just type the new session name and press enter
-- If this name conflicts with another session name -> add a double/single quotes `'example'`
 
 ### Use in command line
 
@@ -76,7 +63,6 @@ function tmuxSessionSwitch() {
   session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
   tmux switch-client -t "$session"
 }
-alias af='tmuxSessionSwitch'
 ```
 
 > fzfDown is my customize fzf ui, you can simply use fzf instead of fzfDown
