@@ -6,6 +6,7 @@
 
 ## Getting started
 
+- Video: https://youtu.be/WJEphxyKAbw
 - Install the [tpm](https://github.com/tmux-plugins/tpm) Tmux Plugin Manager.
 - Put `set -g @plugin 'thuanOwa/tmux-fzf-session-switch'` into your tmux config
 - Use tpm to install this plugin. Default you can press `prefix + I` (`I` is
