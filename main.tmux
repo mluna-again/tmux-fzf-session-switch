@@ -31,7 +31,7 @@ function set_goto_session_bindings {
 
   local key
   for key in $key_bindings; do
-    tmux bind "$key" display-popup -T "Session" -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session_fzf.sh"
+    tmux bind "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session_fzf.sh"
   done
 }
 
