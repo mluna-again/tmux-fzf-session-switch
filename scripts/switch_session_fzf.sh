@@ -8,18 +8,18 @@ function main {
   local query
   local sess_arr
   local retval
-  sessions=$(tmux list-sessions -F "#{session_name}" |
+  sessions=$(tmux list-windows -a | 
     fzf --select-1 --exit-0 --print-query --reverse)
   retval=$?
 
   IFS=$'\n' read -rd '' -a sess_arr <<<"$sessions"
 
-  session=${sess_arr[1]}
+  session=$(echo ${sess_arr[1]} | sed 's/: .*//g')
   query=${sess_arr[0]}
 
   if [ $retval == 0 ]; then
     if [ "$session" == "" ]; then
-      session="$query"
+        session=$(echo "$query" | sed 's/: .*//g')
     fi
     tmux switch-client -t "$session"
   elif [ $retval == 1 ]; then
