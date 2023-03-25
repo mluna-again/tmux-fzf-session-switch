@@ -117,6 +117,7 @@ space + semicolon: KEY_RIGHTCTRL+a+f
 ## QnA
 
 Why I don't create push request to main repo?
+
 -> "Don't confirm `y` to create a new session". This one different flow from the original repo. So that's why I don't push request into original repo.
 
 Different from https://github.com/rcribbs/tmux-fzf-session-switch ?
