@@ -4,16 +4,21 @@
 
 ![preview img](/img/preview.png)
 
+## Can do?
+
+1. Session + window name fuzzy search and switch.
+2. Create new session
+
 ## Getting started
 
 - Video: 
   - Tutorial: https://youtu.be/WJEphxyKAbw
   - Demo v2, session + window search: https://youtu.be/XWdDwQJgUmw
+
 - Install the [tpm](https://github.com/tmux-plugins/tpm) Tmux Plugin Manager.
 - Put `set -g @plugin 'thuanOwa/tmux-fzf-session-switch'` into your tmux config
 - Use tpm to install this plugin. Default you can press `prefix + I` (`I` is
   `shift + i` = I)
-
 - `Prefix + Ctrl + f`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl ->
   press a -> press f -> done)
 - If you type a name that doesn't exist, you will be prompted to create it.
