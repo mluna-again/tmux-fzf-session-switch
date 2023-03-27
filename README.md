@@ -19,8 +19,7 @@
 - Put `set -g @plugin 'thuanOwa/tmux-fzf-session-switch'` into your tmux config
 - Use tpm to install this plugin. Default you can press `prefix + I` (`I` is
   `shift + i` = I)
-- `Prefix + Ctrl + f`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl ->
-  press a -> press f -> done)
+- `Prefix + Ctrl + f`: Open up fzf in a new tab. (e.g. prefix = ctrl + a. Hold ctrl -> press a -> press f -> done)
 - If you type a name that doesn't exist, you will be prompted to create it.
 
 > If this name conflicts with another session name -> add a double/single quotes `'example'`
@@ -29,6 +28,7 @@
 
 - [Tmux >= 3.3a](https://github.com/thuanowa/tmux-fzf-session-switch/pull/5/files) `pop-up menu`
 - [fzf](https://github.com/junegunn/fzf)
+- `>=` 2 tmux sessions (bug [#10](https://github.com/thuanowa/tmux-fzf-session-switch/issues/10))
 
 ## Customize
 
