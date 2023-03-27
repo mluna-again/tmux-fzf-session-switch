@@ -72,20 +72,13 @@ set -g @fzf-goto-win-height 20
 
 ```bash
 function tmuxSessionSwitch() {
-  local session
-  session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
+  session=$(tmux list-windows -a | fzf | sed 's/: .*//g')
   tmux switch-client -t "$session"
 }
 ```
 
-> fzfDown is my customize fzf ui, you can simply use fzf instead of fzfDown
-
 ```bash
-fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
-```
-
-```bash
-function killAllUnnameTmuxSession() {
+function tmux_kill_uname_session() {
   echo "kill all unname tmux session"
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
@@ -100,7 +93,7 @@ function killAllUnnameTmuxSession() {
 > use with `clear` command is the best
 
 ```
-alias clear='killAllUnnameTmuxSession ; clear -x'
+alias clear='tmux_kill_uname_session ; clear -x'
 ```
 
 ### Easy to press
