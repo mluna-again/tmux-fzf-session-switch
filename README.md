@@ -29,7 +29,6 @@
 
 - [Tmux >= 3.3a](https://github.com/thuanowa/tmux-fzf-session-switch/pull/5/files) `pop-up menu`
 - [fzf](https://github.com/junegunn/fzf)
-- Rg (recommended but not required)
 
 ## Customize
 
