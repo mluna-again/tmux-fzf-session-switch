@@ -1,5 +1,3 @@
-↖️ (Feeling lost? Use the GitHub TOC!)
-
 # TMUX FZF Session Switch
 
 ![preview img](/img/preview.png)
