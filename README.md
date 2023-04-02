@@ -18,7 +18,7 @@ One single shortcut for switch sessions, windows and create new session. This ma
 
 ## Plan
 
-- Blazingly fast tmux workflow, built muscle memory
+- Blazingly fast tmux workflow, built muscle memory, better DX
 
 ## Not in plan
 
