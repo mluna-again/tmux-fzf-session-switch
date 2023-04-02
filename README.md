@@ -14,7 +14,7 @@
 
 ## Reason use this plugin?
 
-- One single shortcut for switch sessions, windows and create new session. This make simple flow, "i want go to ?, press shortcut type ? enter done.", "i want go to ?, press shortcut type ?, Uh! not have that okay press enter create new session with ? name"
+One single shortcut for switch sessions, windows and create new session. This make simple flow, "i want go to ?, press shortcut type ? enter done.", "i want go to ?, press shortcut type ?, Uh! not have that okay press enter create new session with ? name"
 
 ## Plan
 
