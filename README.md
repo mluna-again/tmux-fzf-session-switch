@@ -20,15 +20,15 @@ One single shortcut for switch sessions, windows and create new session. This ma
 
 ### Plan
 
-- Blazingly fast tmux workflow, built muscle memory, better DX
+Blazingly fast tmux workflow, built muscle memory, better DX.
 
 ### Not in plan
 
-- Becoming chad, have super black magic power like [tmux-fzf](https://github.com/sainnhe/tmux-fzf)
+Becoming chad, have super black magic power like [tmux-fzf](https://github.com/sainnhe/tmux-fzf)
 
 ### Why I don't create push request to main repo?
 
--> "Don't confirm `y` to create a new session". This one different flow from the original repo. So that's why I don't push request into original repo.
+"Don't confirm `y` to create a new session". This one different flow from the original repo. So that's why I don't push request into original repo.
 
 ## Getting started
 
