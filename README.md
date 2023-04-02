@@ -7,9 +7,27 @@
 1. Session + window name fuzzy search and switch.
 2. Create new session
 
+## Reason don't use this plugin?
+
+1. [tmux-fzf](https://github.com/sainnhe/tmux-fzf) have more black magic.
+2. [tmux-fzf](https://github.com/sainnhe/tmux-fzf) have single shortcut for [switch session](https://github.com/sainnhe/tmux-fzf/issues/6) and many function [tmux-fzf](https://github.com/sainnhe/tmux-fzf) had.
+
+## Reason use this plugin?
+
+- One single shortcut for switch sessions, windows and create new session. This make simple flow, "i want go to ?, press shortcut type ? enter done.", "i want go to ?, press shortcut type ?, Uh! not have that okay press enter create new session with ? name"
+
+## Plan
+
+- Blazingly fast tmux workflow, built muscle memory
+
+## Not in plan
+
+- Becoming chad, have super black magic power like [tmux-fzf](https://github.com/sainnhe/tmux-fzf)
+
 ## Getting started
 
-- Video: 
+- Video:
+
   - Tutorial: https://youtu.be/WJEphxyKAbw
   - Demo v2, session + window search: https://youtu.be/XWdDwQJgUmw
 
