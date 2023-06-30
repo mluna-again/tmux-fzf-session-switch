@@ -4,6 +4,10 @@ CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 layout="$1"
 
+cooler_fzf() {
+  fzf --layout=reverse --prompt=" " --pointer=" " --header-first --header="Switch session" --color="bg:#1D1C19,bg+:#c4746e,fg+:#1D1C19,gutter:#1D1C19,header:#c4746e,prompt:#c4746e,query:#c5c9c5"
+}
+
 function main {
   local sessions
   local session
@@ -11,7 +15,7 @@ function main {
   local sess_arr
   local retval
   sessions=$(tmux list-sessions -F "#{session_name}" |
-    fzf --exit-0 --print-query --layout="$layout")
+    cooler_fzf --exit-0 --print-query --layout="$layout")
   retval=$?
 
   IFS=$'\n' read -rd '' -a sess_arr <<<"$sessions"
