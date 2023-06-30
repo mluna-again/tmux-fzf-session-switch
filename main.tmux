@@ -7,12 +7,14 @@ default_width=55
 default_height=10
 defautl_without_prefix=false
 defautl_search_session_only=false
+default_layout=default
 
 tmux_option_goto="@fzf-goto-session"
 tmux_option_goto_without_prefix="@fzf-goto-session-without-prefix"
 tmux_option_width="@fzf-goto-win-width"
 tmux_option_height="@fzf-goto-win-height"
 tmux_option_search_session_only="@fzf-goto-session-only"
+tmux_option_layout="@fzf-goto-layout"
 
 get_tmux_option() {
 	local option=$1
@@ -31,30 +33,31 @@ function set_goto_session_bindings {
 	local width=$(get_tmux_option "$tmux_option_width" "$default_width")
 	local height=$(get_tmux_option "$tmux_option_height" "$default_height")
 	local search_session_only=$(get_tmux_option "$tmux_option_search_session_only" "$defautl_search_session_only")
-
+	local layout
+	layout=$(get_tmux_option "$tmux_option_layout" "$default_layout")
 
 	if [ "$search_session_only" = false ]; then
 		if [ "$without_prefix" = true ]; then
 			local key
 			for key in $key_bindings; do
-				tmux bind -n "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session_window.sh"
+				tmux bind -n "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session_window.sh $layout"
 			done
 		else
 			local key
 			for key in $key_bindings; do
-				tmux bind "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session_window.sh"
+				tmux bind "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session_window.sh $layout"
 			done
 		fi
 	else
 		if [ "$without_prefix" = true ]; then
 			local key
 			for key in $key_bindings; do
-				tmux bind -n "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session.sh"
+				tmux bind -n "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session.sh $layout"
 			done
 		else
 			local key
 			for key in $key_bindings; do
-				tmux bind "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session.sh"
+				tmux bind "$key" display-popup -w "$width" -h "$height" -y 15 -E "$CURRENT_DIR/scripts/switch_session.sh $layout"
 			done
 		fi
 	fi

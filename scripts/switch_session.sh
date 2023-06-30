@@ -2,6 +2,8 @@
 
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+layout="$1"
+
 function main {
   local sessions
   local session
@@ -9,7 +11,7 @@ function main {
   local sess_arr
   local retval
   sessions=$(tmux list-sessions -F "#{session_name}" |
-    fzf --exit-0 --print-query --reverse)
+    fzf --exit-0 --print-query --layout="$layout")
   retval=$?
 
   IFS=$'\n' read -rd '' -a sess_arr <<<"$sessions"
